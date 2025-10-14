@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Simple ToDo App</h1>
+    <div>
+      <input type="text" name="" id="input-text" />
+      <button id="btn">Add</button>
+    </div>
+
+    <script>
+      let inputText = document.getElementById("input-text");
+      let btn = document.getElementById("btn");
+      let div = document.createElement("div");
+      div.className = "container";
+      console.log(div);
+      let container = document.querySelector(".container");
+      function addElement() {
+        let newPara = document.createElement("p");
+        newPara.innerHTML = inputText.value;
+        div.appendChild(newPara);
+        console.log(div);
+        document.body.appendChild(div);
+        inputText.value = "";
+      }
+      btn.addEventListener("click", () => {
+        addElement();
+      });
+      container.addEventListener("click", (event) => {
+        let curEle = event.target;
+        curEle.remove();
+      });
+    </script>
+  </body>
+</html>

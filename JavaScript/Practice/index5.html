@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Project</title>
+    <style>
+      /* 100% == 16px
+          1px = 6.52%
+          1em = 16px
+          */
+      @font-face {
+        font-family: "mujahid-font";
+        src: url("/Oups.otf");
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      :root {
+        --bg-color: red;
+        --button-color: pink;
+      }
+      button {
+        color: var(--bg-color);
+        background-color: var(--button-color);
+      }
+      .flex-container {
+        width: 60%;
+        height: 600px;
+        background-image: linear-gradient(to left, pink, green, blue, yellow);
+        border: 2px solid black;
+        margin: 100px auto;
+        container-type: inline-size;
+        container-name: mediaOfContainer;
+        /* display: flex; */
+      }
+      .flex-container:has([type="radio"]:checked) label {
+        accent-color: red;
+      }
+      input[type="radio"] {
+        accent-color: pink;
+      }
+
+      :is(ul) :is(li) h4 {
+        color: red;
+      }
+
+      :where(ul) :where(li) h4 {
+        color: yellow;
+      }
+
+      :is(.flex-container) div {
+        width: 500px;
+        aspect-ratio: 1;
+        margin: 0 auto;
+        background-image: repeating-linear-gradient(
+          to right,
+          black 20px,
+          white 50px
+        );
+        box-shadow: 20px 20px 5px 2px rgb(218, 106, 106);
+      }
+
+      @container mediaOfContainer (width <=400px) {
+        :is(.flex-container) div {
+          width: 200px;
+          background-image: linear-gradient(
+            pink,
+            rgb(43, 177, 23),
+            black,
+            brown
+          );
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div></div>
+      <!-- <label for="radio">Select Gender</label>
+      <input type="radio" name="radio" /> Male
+      <input type="radio" name="radio" /> Female
+
+      <ul>
+        <li>
+          <h4>This is heading 4</h4>
+        </li>
+      </ul> -->
+    </div>
+  </body>
+</html>

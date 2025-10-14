@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <p>hello</p>
+      <h1>Master Mujahid</h1>
+    </div>
+    <script>
+      // let promise1 = new Promise((resolve)=>{
+      //   setTimeout(()=>{
+      //     resolve('Promise 1')
+      //   }, 1000)
+      // })
+      // let promise2 = new Promise((resolve , reject)=>{
+      //   setTimeout(()=>{
+      //     resolve('Promise 2')
+      //   }, 100)
+      // })
+      // let promise3 = new Promise((resolve)=>{
+      //   setTimeout(() => {
+      //     resolve('Promise 3')
+      //   }, 50);
+      // })
+
+      // Promise.race([promise1, promise2, promise3]).then((response)=>{
+      //   console.log(response)
+      // }).catch((error)=>{
+      //   console.log('failed: '+ error)
+      // }).finally(()=>{
+      //   console.log('finally')
+      // })
+
+      let api = "https://jsonplaceholder.typicode.com/todos/1";
+      // let api = "https://icanhazdadjoke.com/";
+      //****************************************************************************************
+      // function print() {
+      //   let api = fetch("https://icanhazdadjoke.com/", {
+      //     headers: {
+      //       Accept: 'application/json',
+      //     }
+      //   });
+      //   console.log(api);
+      //   return api;
+      // }
+      // let api = print();
+      // api
+      //   .then((response) => {
+      //     console.log(response);
+      //     return response.json();
+      //   })
+      //   .then((data) => {
+      //     console.log(data);
+      //   })
+      //   .catch((error) => {
+      //     console.log("error is : " + error);
+      //   });
+
+      //****************************************************************
+      // async function asyncProject() {
+      //   try {
+      //     let response = await fetch(api, {
+      //       headers: {
+      //         Accept: "application/json",
+      //       },
+      //     });
+      //     console.log(response);
+      //     let data = await response.json();
+      //     console.log("data: ", data);
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+      // }
+      // asyncProject();
+
+      let obj = {
+        name: "ali",
+        marks: 900,
+        age: 99,
+      };
+      let x = Object.entries(obj);
+      console.log(x);
+      let y = x.flatMap((cur, index, array) => {
+        return cur;
+      });
+      console.log(y);
+
+      let container = document.getElementById('container')
+      console.log(container)
+      let z = container.children
+      console.log(z)
+      
+    </script>
+  </body>
+</html>
