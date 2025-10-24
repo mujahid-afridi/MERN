@@ -1,1 +1,0 @@
-Opcaity class of tailwand does not work in react project. Solution: Then i  css for it. 
